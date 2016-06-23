@@ -12,15 +12,8 @@ If you don't have Node, install Node by going to https://nodejs.org/
 npm install nodal -g
 ```
 
-### Install Postgres: Option 1
-Step 1: install Homebrew: http://brew.sh/
-Step 2: in terminal run `brew install postgresql`
-Step 3: in terminal run `pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start`
-This is an important step, it will start postgres
-Step 4: in terminal run `createuser postgres -s`.
-This will create a default postgres superuser with no password.
+### Install Postgres
 
-### Install Postgres: Option 2
 Go to http://postgresapp.com/ and download the application. 
 Move the application to your applications folder and launch the application.
 Follow steps 3 and 4 from above. 
@@ -281,29 +274,4 @@ select * from tweets; // select all columns from tweets
 ```js
 // error 
 Error: connect ECONNREFUSED 127.0.0.1:5432 // this means that your postgres is not running
-
-// first 
-brew uninstall postgresql
-
-// then 
-brew install postgresql // install postgres
-createuser postgres -s // create super user with name postgres
-```
-
-```js
-// show all running processes of postgres
-ps auxwww | grep postgres
-
-// start postgres
-pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-
-// stop postgres
-pg_ctl -D /usr/local/var/postgres stop -s -m fast
-pkill postgres // you can also do this
-
-psql /// open postgress terminal
-
-// creating roles
-\du // show list of roles
-CREATE USER postgres SUPERUSER; // create user named postgres with role of Superuser
 ```
