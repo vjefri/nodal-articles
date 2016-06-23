@@ -16,7 +16,6 @@ npm install nodal -g
 
 Go to http://postgresapp.com/ and download the application. 
 Move the application to your applications folder and launch the application.
-Follow steps 3 and 4 from above. 
 
 If you get any error messages during this tutorial, some common errors are included at end of article. 
 
